@@ -1,0 +1,87 @@
+# 📊 Generador de Reportes en Excel con Gráficos de Barras
+
+Este proyecto genera un informe en **Excel** a partir de una consulta a una base de datos **SQL Server**. El informe incluye gráficos de barras apiladas que muestran los diferentes estados de los documentos por tipo y fecha de emisión.
+
+## 🚀 Funcionalidades
+- 📂 Conexión automática a **SQL Server** mediante **variables de entorno**.
+- 📊 Generación de gráficos de barras **apiladas** por cada tipo de documento.
+- 📝 Exportación de los datos a un archivo **Excel (.xlsx)**.
+- 🖼 Inserción automática de gráficos en el archivo Excel.
+
+---
+
+## 📌 Requisitos
+### 🔹 Dependencias
+Asegúrate de tener **Python 3.8+** instalado y las siguientes dependencias:
+
+```bash
+pymssql
+pandas
+matplotlib
+openpyxl
+dotenv
+```
+Puedes instalarlas ejecutando:
+```bash
+pip install -r requirements.txt
+```
+
+### 🔹 Configuración de Variables de Entorno
+Debes configurar las siguientes variables de entorno en un archivo **.env** dentro del proyecto:
+```ini
+DB_SERVER=tu_servidor_sql
+DB_DATABASE=tu_base_de_datos
+DB_USER=tu_usuario
+DB_PASSWORD=tu_contraseña
+```
+
+---
+
+## 💻 Cómo Ejecutar la Aplicación
+### 🖥 En **Windows**
+1️⃣ Clona el repositorio:
+```bash
+git clone https://github.com/tu_usuario/repo.git && cd repo
+```
+2️⃣ Activa un entorno virtual y instala dependencias:
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+3️⃣ Ejecuta el script principal:
+```bash
+python generar_reporte.py
+```
+4️⃣ Se generará un archivo **Reporte_SQL.xlsx** con los gráficos y datos extraídos.
+
+### 🐧 En **Linux**
+1️⃣ Clona el repositorio:
+```bash
+git clone https://github.com/tu_usuario/repo.git && cd repo
+```
+2️⃣ Activa un entorno virtual y instala dependencias:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+3️⃣ Ejecuta el script:
+```bash
+python3 generar_reporte.py
+```
+4️⃣ Se generará el archivo **Reporte_SQL.xlsx** con los datos y gráficos.
+
+---
+
+## 📌 Estructura del Proyecto
+```plaintext
+/
+├── generar_reporte.py  # Script principal
+├── .env                # Variables de entorno
+├── requirements.txt    # Dependencias del proyecto
+├── README.md           # Documentación
+├── Reporte_SQL.xlsx    # Archivo generado (después de ejecutar el script)
+```
+
+---
